@@ -1,0 +1,8 @@
+# node modules
+node_modules/
+
+# result files
+dist/
+
+# package-lock.json
+package-lock.json

@@ -1,0 +1,44 @@
+body, a, div, li, p, ul {
+  margin: 0;
+  padding: 0;
+}
+
+#app {
+  position:absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #010101;
+}
+
+#app #map-view {
+  position:relative;
+  float:left;
+  width: calc(100% - 600px);
+  height: 100%;
+}
+
+#map-view #google-map {
+  position:absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.mist-map {
+  position:absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(196, 196, 196, 0.5);
+  z-index: 999;
+}
+
+#side-view {
+  float:right;
+  width: 600px;
+  height: 100%;
+  display: inline-block;
+
+  /* Gray 1 */
+  background: rgba(51, 51, 51, 0.8);
+}
