@@ -29,8 +29,22 @@ body, a, div, li, p, ul {
   position:absolute;
   width: 100%;
   height: 100%;
-  background: rgba(196, 196, 196, 0.5);
+  background: rgba(22, 22, 22, 0.5);
   z-index: 999;
+}
+
+.mist-map .logo {
+  position:absolute;
+  width:200px;
+}
+
+
+.hc {
+  left:0; right:0; margin-left:auto; margin-right:auto;
+}
+
+.vc {
+  top: 0; bottom:0; margin-top:auto; margin-bottom:auto;
 }
 
 #side-view {
@@ -41,4 +55,23 @@ body, a, div, li, p, ul {
 
   /* Gray 1 */
   background: rgba(51, 51, 51, 0.8);
+}
+
+
+@media (max-width: 800px) {
+  #side-view {
+    float:bottom;
+    width: 100%;
+    height: 40%;
+    display: inline-block;
+
+    /* Gray 1 */
+    background: rgba(51, 51, 51, 0.8);
+  }
+  #app #map-view {
+    position:relative;
+    float:top;
+    width: 100%;
+    height: 60%;
+  }
 }
