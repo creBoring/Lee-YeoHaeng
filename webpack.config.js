@@ -7,10 +7,11 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 module.exports={
   context: path.join(__dirname + '/src'),
   entry: {
-    'app.bundle' : './resources/js/app.js'
+    'login' : './resources/js/login.js',
+    'index' : './resources/js/app.js'
   },
   output: {
-    filename: '[name]-test.js',
+    filename: '[name].bundle.js',
     path: path.resolve(__dirname + '/dist')
   },
   mode: 'none',
@@ -28,8 +29,18 @@ module.exports={
 
     // index html 지정
     new HtmlWebPackPlugin({
+      title: 'Index Title',
       template: './index.html',
-      filename: 'index.html'
-    })
+      filename: 'index.html',
+      chunks : ['index']
+    }),
+
+    // login html 지정
+    new HtmlWebPackPlugin({
+      title: 'Login Title',
+      template: './login.html',
+      filename: 'login.html',
+      chunks : ['login']
+    }),
   ]
 }
