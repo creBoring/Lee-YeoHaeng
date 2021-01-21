@@ -1,0 +1,69 @@
+* {
+  -ms-user-select: none; -moz-user-select: -moz-none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;
+}
+
+body, a, div, li, p, ul {
+  margin: 0;
+  padding: 0;
+}
+
+input[type="text"], input[type="password"], input[type="submit"] {
+  height: auto; /* 높이 초기화 */
+  line-height: normal; /* line-height 초기화 */
+  padding: 10px 6.5px; /* 여백 설정 */
+}
+
+#app {
+  position:absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #010101;
+}
+
+#map-view {
+  position:absolute;
+  float:left;
+  width: 100%;
+  height: 100%;
+}
+
+#side-view {
+  position:absolute;
+  right:0;
+  width: 600px;
+  height: 100%;
+  display: inline-block;
+  background: rgba(1, 1, 1, 0.92);
+  z-index: 999;
+}
+
+#map-view #google-map {
+  position:absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.logo {
+  display: block;
+  width:200px;
+  -webkit-user-drag: none;
+}
+
+.hc {
+  left: 0; right:0; margin-left:auto; margin-right:auto;
+}
+
+.vc {
+  top: 0; bottom:0; margin-top:auto; margin-bottom:auto;
+}
+
+
+@media (max-width: 980px) {
+  #side-view {
+    bottom:0;
+    width: 100%;
+    height: 40%;
+  }
+}
