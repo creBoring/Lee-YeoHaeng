@@ -3,44 +3,46 @@
 const path = require('path')
 const HtmlWebPackPlugin = require('html-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
+const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
 module.exports={
-  context: path.join(__dirname + '/src'),
   entry: {
-    'login' : './resources/js/login.js',
-    'index' : './resources/js/app.js'
+    main: '@/main'
   },
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname + '/dist')
   },
-  mode: 'none',
-  plugins: [
+  resolve: {
+    extensions: ['.js', '.vue'],
+    alias: {'@': path.join(__dirname, 'src/')}
+  },
 
-    // asset 파일들 복사
-    new CopyWebpackPlugin({
+  module: {
+    rules: [
+      {
+        test: /\.vue$/,
+        loader: 'vue-loader',
+        include: [path.join(__dirname, 'src/')]
+      },
+      {
+        test: /\.css$/,
+        loader: 'css-loader'
+      }
+    ]
+  },
+  plugins: [
+    new VueLoaderPlugin(),          // vue loader Plugin 생성
+    new HtmlWebPackPlugin({         // HTML 파일 지정
+      template: './index.html'
+    }),
+    new CopyWebpackPlugin({         // asset 파일들 복사
       patterns: [
         {
-          from: "resources/assets/",
+          from: "src/assets/",
           to: "assets/"
         }
       ]
-    }),
-
-    // index html 지정
-    new HtmlWebPackPlugin({
-      title: 'Index Title',
-      template: './index.html',
-      filename: 'index.html',
-      chunks : ['index']
-    }),
-
-    // login html 지정
-    new HtmlWebPackPlugin({
-      title: 'Login Title',
-      template: './login.html',
-      filename: 'login.html',
-      chunks : ['login']
-    }),
+    })
   ]
 }

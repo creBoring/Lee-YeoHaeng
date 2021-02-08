@@ -3,8 +3,8 @@
   "version": "0.0.1",
   "description": "Lee YeoHaeng will figure out the best travel route for you.",
   "scripts": {
-    "test": "webpack-dev-server --config webpack.dev.js",
-    "build": "webpack"
+    "dev": "webpack-dev-server --config webpack.dev.js --mode development",
+    "build": "webpack --mode production"
   },
   "repository": {
     "type": "git",
@@ -18,9 +18,16 @@
   "homepage": "https://github.com/creBoring/Lee-YeoHaeng#readme",
   "dependencies": {
     "@googlemaps/js-api-loader": "^1.11.1",
+    "vue": "^2.6.12",
+    "vue-router": "^3.5.1"
+  },
+  "devDependencies": {
     "copy-webpack-plugin": "^7.0.0",
+    "css-loader": "^5.0.1",
     "html-loader": "^1.3.2",
     "html-webpack-plugin": "^4.5.1",
+    "vue-loader": "^15.9.6",
+    "vue-template-compiler": "^2.6.12",
     "webpack": "^5.12.2",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.1",

@@ -7,7 +7,7 @@
 
 import { Loader } from "@googlemaps/js-api-loader"
 
-
+export default { name: 'LoginPage' }
 // Google map init
 let map;
 const loader = new Loader({
