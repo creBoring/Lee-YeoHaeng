@@ -32,4 +32,4 @@
 </template>
 
 <script src='@/assets/js/LoginPage.js'></script>
-<style scoped src='@/assets/css/LoginPage.css'></style>
+<style src='@/assets/css/LoginPage.css'></style>
