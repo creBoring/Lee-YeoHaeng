@@ -10,7 +10,7 @@
       <div class="side-box hc vc">
         <img src="assets/img/daum_logo.png" class="logo hc">
         <div class="login-box">
-          <form action="index.html" method="get">
+          <form action="app" method="get">
             <div class="user-info-form hc vc">
               <div class="input-form">
                 <label class="input-label" for="id-input"></label>
@@ -20,9 +20,11 @@
                 <label class="input-label" for="pw-input"></label>
                 <input id="pw-input" type="password" placeholder="PW" class="login-input"><br>
               </div>
-              <div class="input-form">
-                <input id="login-submit" type="submit" value="Log in" class="login-input">
-              </div>
+              <router-link to="/app">
+                <div class="input-form">
+                  <input id="login-submit" type="submit" value="Log in" class="login-input">
+                </div>
+              </router-link>
             </div>
           </form>
         </div>
