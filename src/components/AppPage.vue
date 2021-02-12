@@ -8,11 +8,10 @@
         <img src="assets/img/daum_logo.png" class="logo hc vc">
       </div>
       <div class="article">
+        <input id="submit-selected-places" class="hc" type="button" name="" value="계산하기">
         <ul class="selected-places">
-          <li>
-            <div class="place">
-
-            </div>
+          <li v-for="(place, index) in yeohaengList">
+            {{ index+1 }} - {{ place }}
           </li>
         </ul>
       </div>

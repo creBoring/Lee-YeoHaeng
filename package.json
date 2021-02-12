@@ -18,6 +18,8 @@
   "homepage": "https://github.com/creBoring/Lee-YeoHaeng#readme",
   "dependencies": {
     "@googlemaps/js-api-loader": "^1.11.1",
+    "axios": "^0.21.1",
+    "lodash": "^4.17.20",
     "vue": "^2.6.12",
     "vue-router": "^3.5.1"
   },

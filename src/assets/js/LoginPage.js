@@ -44,7 +44,6 @@ export default {
       if(this.cityCount > this.cityArray.length - 1) {
         this.cityCount = 0;
       }
-      console.log("test" + this.cityCount);
     }
   },
   beforeMount: function () {

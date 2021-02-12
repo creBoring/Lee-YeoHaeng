@@ -24,3 +24,18 @@
   position:absolute;
   width: 120px;
 }
+
+.article #submit-selected-places {
+  position:absolute;
+  width: 200px;
+  height: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.selected-places {
+  list-style: none;
+  color: white;
+  position: absolute;
+  top: 80px;
+}
