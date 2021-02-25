@@ -6,6 +6,8 @@
 'use strict';
 
 import { Loader } from "@googlemaps/js-api-loader"
+import axios from 'axios';
+
 //import {  }
 
 let placeTemplate = '';
@@ -20,7 +22,7 @@ export default {
         { lat: 35, lng: 139 },
         { lat: 34, lng: 150 }
       ],
-      //yeohaengRoutes: []
+      yeohaengRoutes: []
     }
   },
   methods: {
@@ -45,7 +47,7 @@ export default {
         this.addListeners();
       });
     },
-    /*GetRoutes() {
+    getRoutes() {
       var vm = this;
       axios.get('https://lyh-api.creboring.com/getRoutes')
         .then(function (response) {
@@ -55,7 +57,7 @@ export default {
         .catch(function (error) {
           console.log("Error Occurred while getting result of routes");
         })
-    }*/
+    }
   },
   beforeMount: function () {
     this.initMap();

@@ -8,7 +8,7 @@
         <img src="assets/img/daum_logo.png" class="logo hc vc">
       </div>
       <div class="article">
-        <input id="submit-selected-places" class="hc" type="button" name="" value="계산하기">
+        <button v-on:click="getRoutes" id="submit-selected-places" class="hc">계산하기</button>
         <ul class="selected-places">
           <li v-for="(place, index) in yeohaengList">
             {{ index+1 }} - {{ place }}
