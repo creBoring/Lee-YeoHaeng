@@ -1,0 +1,13 @@
+phases:
+  install:
+    runtime-versions:
+      nodejs: 14.x
+  pre_build:
+    commands:
+      - npm install
+  build:
+    commands:
+      - npm run build
+artifacts:
+  files:
+    - 'dist/*'
