@@ -49,7 +49,7 @@ export default {
     },
     getRoutes() {
       var vm = this;
-      axios.get('https://lyh-api.creboring.com/getRoutes')
+      axios.get('https://lyh-api.creboring.com/test/post-yeohaeng')
         .then(function (response) {
           console.log("Success by getting result!")
           vm.yeohaengRoutes = _.capitalize(response.data.routes);
