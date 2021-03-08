@@ -49,10 +49,11 @@ export default {
     },
     getRoutes() {
       var vm = this;
-      axios.get('https://lyh-api.creboring.com/test/post-yeohaeng')
+      axios.post('https://lyh-api.creboring.com/test/post-yeohaeng', vm.yeohaengList)
         .then(function (response) {
           console.log("Success by getting result!")
-          vm.yeohaengRoutes = _.capitalize(response.data.routes);
+          console.log(JSON.stringify(response.data.body));
+          //vm.yeohaengRoutes = _.capitalize(response.data.routes);
         })
         .catch(function (error) {
           console.log("Error Occurred while getting result of routes");
